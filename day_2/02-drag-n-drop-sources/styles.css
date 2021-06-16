@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  background: url(https://www.wired.com/wp-content/uploads/2014/10/ut_interstellarOpener_f.png) 50% 50%;
+  background-size: cover;
+  filter: brightness(1);
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 150px;
+  height: 66px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  color: #828282;
+  text-align: center;
+  cursor: grab;  
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+}
+
+.start {
+  background: linear-gradient(90deg, #b35da0 0%, #229efd 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #1f79c2 0%, #56a59a 100%);
+}
+
+.done {
+  background: linear-gradient(90deg, #4c9065 0%, #436e83 100%);
+}
+
+.hold{  
+  color: #fff;  
+  text-align: center;
+  line-height: 20px;
+  background-color: #222;
+  opacity: .3;
+  border-radius: 20px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  transition: opacity 0.3s ease-in-out;
+
+}
+.hide{
+  display: none;
+}
+
+.hovered{  
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 6px rgba(42, 66, 73, 0.15);
+}
+.add-card{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #fff;
+  color: #828282;
+  text-align: center;
+  font-size: 15px;
+}
+.add-card:active, .add-card:focus{
+  outline: none;
+}
+
+.add-card:empty:not(:focus):before{
+  content:attr(data-text)
+}
